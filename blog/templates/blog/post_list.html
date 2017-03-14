@@ -4,6 +4,16 @@
 	<title>Test Blog</title>
 </head>
 <body>
-	<p>Hello World</p>
+	<div>
+		<h1>Test Page</h1>
+	</div>
+{% for post in posts %}
+	<div>
+		<h1>{{ post.title }} </h1>
+		<p>published: {{ post.published_date }}</p>
+		<p>author: {{ post.author}} </p>
+		<p>{{ post.text|linebreaksbr }} </p>
+	</div>
+{% endfor %}
 </body>
 </html>
